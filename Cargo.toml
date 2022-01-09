@@ -3,4 +3,5 @@ members = [
     "packages/cat",
     "packages/grep",
     "packages/head",
+    "packages/mkdir",
 ]

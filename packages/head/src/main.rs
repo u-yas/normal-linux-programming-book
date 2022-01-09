@@ -3,17 +3,16 @@ use std::io::Write;
 // Note: this requires the `derive` feature
 use clap;
 use clap::Parser;
-use head::lib::read_file::read_file;
-
+use head::lib::read::read_file;
 /// Simple program to greet a person
 #[derive(Parser, Debug)]
 #[clap(about, version, author)]
 struct Args {
-    /// Name of the person to greet
+    /// output file
     #[clap(name = "file", parse(from_os_str))]
     file: Option<std::path::PathBuf>,
 
-    /// Number of times to greet
+    /// number of lines to output
     #[clap(short, long, default_value_t = 1)]
     lines: u16,
 }
